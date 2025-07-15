@@ -5,14 +5,14 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'juan.perez@example.com',
-      link: 'mailto:juan.perez@example.com'
+      value: 'ljimenezv2006@gmail.com',
+      link: 'mailto:ljimenezv2006@gmail.com'
     },
     {
       icon: FaPhone,
       label: 'Teléfono',
-      value: '+502 1234-5678',
-      link: 'tel:+50212345678'
+      value: '+502 5160-4553',
+      link: 'tel:+50251604553'
     },
     {
       icon: FaMapMarkerAlt,
@@ -26,14 +26,14 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/juan-perez-dev',
+      url: 'https://www.linkedin.com/in/lisandro-jim%C3%A9nez-v%C3%A1squez-537382352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       color: '#0077B5',
       description: 'Conecta conmigo profesionalmente'
     },
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/juan-perez-dev',
+      url: 'https://github.com/LisandroJimenez',
       color: '#333',
       description: 'Revisa mi código y proyectos'
     },
