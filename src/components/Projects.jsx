@@ -1,101 +1,111 @@
-import { FaGithub, FaExternalLinkAlt, FaCode } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaCode, FaStar, FaEye } from 'react-icons/fa'
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'Plataforma de comercio electrónico completa con carrito de compras, sistema de pagos y panel administrativo.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-      github: 'https://github.com/usuario/ecommerce-platform',
-      demo: 'https://ecommerce-demo.com',
+      title: 'SuperKinal',
+      description: 'Aplicación de escritorio desarrollada en JavaFX para la gestión de supermercados. Permite administrar productos, categorías, distribuidores y generar facturas en PDF con JasperSoft.',
+      image: '/assets/SuperKinal.png',
+      technologies: ['JavaFX', 'MySQL', 'JasperSoft', 'Maven'],
+      github: 'https://github.com/LisandroJimenez/Proyecto-SuperKinal2024.git',
+      category: 'Desktop Application',
+      status: 'Completado',
       features: [
-        'Sistema de autenticación completo',
-        'Carrito de compras persistente',
-        'Panel administrativo',
-        'Integración con pasarelas de pago',
-        'Diseño responsivo'
+        'Gestión de productos, categorías y distribuidores',
+        'Sistema de facturación con generación de PDF',
+        'Integración con JasperSoft Reports',
+        'Interfaz amigable y responsiva para escritorio',
+        'Base de datos relacional con MySQL'
       ]
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y seguimiento de progreso.',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Firebase', 'Material-UI', 'Socket.io'],
-      github: 'https://github.com/usuario/task-management',
-      demo: 'https://task-demo.com',
+      title: 'SGDB Restaurante',
+      description: 'Aplicación web desarrollada con JSP y Servlets para la gestión de restaurantes. Permite administrar clientes, platos, proveedores y generar reportes de ventas. Desplegada en Apache Tomcat con base de datos MySQL.',
+      image: '/assets/SGDBRestaurante.png',
+      technologies: ['Java', 'JSP', 'Servlets', 'Apache Tomcat', 'MySQL'],
+      github: 'https://github.com/Kinal2/SGBDRestaurante.git',
+      category: 'Web Application',
+      status: 'Completado',
       features: [
-        'Colaboración en tiempo real',
-        'Sistema de notificaciones',
-        'Gestión de equipos',
-        'Reportes y analytics',
-        'Integración con calendario'
+        'Gestión de clientes, platos y proveedores',
+        'Sistema de reportes de ventas',
+        'Interfaz web dinámica con JSP',
+        'Controladores y servicios organizados por capas',
+        'Despliegue en servidor Apache Tomcat'
       ]
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'Dashboard meteorológico que muestra pronósticos detallados, mapas interactivos y alertas climáticas.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Vue.js', 'Python', 'FastAPI', 'Chart.js'],
-      github: 'https://github.com/usuario/weather-dashboard',
-      demo: 'https://weather-demo.com',
+      title: 'Almacenadora',
+      description: 'Plataforma web avanzada para la gestión de bodegas y almacenamiento. Permite controlar inventarios, proveedores, ingresos y egresos de mercancías, con un dashboard interactivo y notificaciones en tiempo real.',
+      image: '/assets/Almacenadora.png',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'ChakraUI'],
+      github: 'https://github.com/usuario/almacenadora',
+      demo: 'https://almacenadorafrontend.vercel.app/',
+      category: 'Full Stack',
+      status: 'En línea',
       features: [
-        'Pronósticos precisos',
-        'Mapas interactivos',
-        'Alertas personalizadas',
-        'Gráficos dinámicos',
-        'Geolocalización'
+        'Dashboard interactivo con ChakraUI',
+        'Gestión de inventarios y proveedores',
+        'Ingreso y salida de productos',
+        'Autenticación de usuarios',
+        'Notificaciones en tiempo real'
       ]
     },
     {
       id: 4,
-      title: 'Social Media App',
-      description: 'Red social completa con posts, comentarios, sistema de likes y mensajería en tiempo real.',
-      image: 'https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Redis'],
-      github: 'https://github.com/usuario/social-media',
-      demo: 'https://social-demo.com',
+      title: 'Blog Speakly',
+      description: 'Plataforma de blogging donde los usuarios pueden interactuar comentando y dando likes a publicaciones gestionadas desde el backend. Incluye mensajería y notificaciones en tiempo real para mantener a la comunidad activa.',
+      image: '/assets/Blog.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'ChakraUI'],
+      github: 'https://github.com/LisandroJimenez/ReviewManager-FrontEnd.git',
+      demo: 'https://review-manager-front-end-wk2j.vercel.app/',
+      category: 'Social Platform',
+      status: 'En línea',
       features: [
-        'Feed de noticias personalizado',
-        'Mensajería en tiempo real',
-        'Sistema de amigos',
-        'Subida de multimedia',
+        'Visualización de publicaciones',
+        'Sistema de comentarios',
+        'Likes en publicaciones',
+        'Mensajería entre usuarios',
         'Notificaciones push'
       ]
     },
     {
       id: 5,
-      title: 'Learning Management System',
-      description: 'Sistema de gestión de aprendizaje con cursos, evaluaciones, progreso de estudiantes y certificaciones.',
-      image: 'https://images.pexels.com/photos/5940831/pexels-photo-5940831.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Angular', 'Django', 'PostgreSQL', 'AWS'],
-      github: 'https://github.com/usuario/lms-system',
-      demo: 'https://lms-demo.com',
+      title: 'HotelGest',
+      description: 'Sistema integral para la gestión hotelera que permite administrar reservas, habitaciones y facturación de manera eficiente. Facilita el control de disponibilidad, asignación de habitaciones y seguimiento de clientes, optimizando la operación diaria del hotel.',
+      image: '/assets/Hotel.png',
+      technologies: ['React', 'ChakraUI', 'MongoDB', 'Node.js'],
+      github: 'https://github.com/LisandroJimenez/Hotel-Management-FRONTEND/tree/Lisandro-Jimenez',
+      demo: 'https://hotelmanagement-2656a.web.app/',
+      category: 'Management System',
+      status: 'En línea',
       features: [
-        'Gestión de cursos',
-        'Sistema de evaluaciones',
-        'Seguimiento de progreso',
-        'Certificaciones automáticas',
-        'Videoconferencias integradas'
+        'Gestión de reservas',
+        'Administración de habitaciones',
+        'Control de disponibilidad',
+        'Gestión de facturación',
+        'Seguimiento de clientes'
       ]
     },
     {
       id: 6,
-      title: 'Restaurant POS System',
-      description: 'Sistema punto de venta para restaurantes con gestión de inventario, reportes y integración con cocina.',
-      image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Node.js', 'MySQL', 'Socket.io'],
-      github: 'https://github.com/usuario/pos-system',
-      demo: 'https://pos-demo.com',
+      title: 'Videntia',
+      description: 'Plataforma de análisis de imágenes para criminología. Permite a los usuarios subir imágenes que son procesadas por IA para obtener evaluaciones de perfiles, detección de patrones y probabilidad de conductas delictivas.',
+      image: '/assets/videntia.png',
+      technologies: ['React', 'Node.js', 'MySQL', 'Socket.io', 'Google Cloud Vision'],
+      github: 'https://github.com/LuisDeLeon24/MetadataExperimentos/tree/expoKinal',
+      demo: 'https://videntia-999-6d296.web.app/',
+      category: 'AI Platform',
+      status: 'En línea',
       features: [
-        'Interfaz táctil optimizada',
-        'Gestión de inventario',
-        'Reportes en tiempo real',
-        'Integración con cocina',
-        'Múltiples métodos de pago'
+        'Carga de imágenes por el usuario',
+        'Análisis automático con IA',
+        'Evaluación de perfiles de riesgo',
+        'Detección de patrones criminológicos',
+        'Reportes detallados'
       ]
     }
   ]
@@ -103,60 +113,100 @@ const Projects = () => {
   return (
     <section className="projects">
       <div className="container">
-        <h2 className="section-title">Mis Proyectos</h2>
-        <p className="section-subtitle">
-          Una muestra de los proyectos que he desarrollado, desde aplicaciones web hasta sistemas completos
-        </p>
-        
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="project-actions">
-                    <a href={project.github} className="project-btn" target="_blank" rel="noopener noreferrer">
-                      <FaGithub />
-                    </a>
-                    <a href={project.demo} className="project-btn" target="_blank" rel="noopener noreferrer">
-                      <FaExternalLinkAlt />
-                    </a>
+        {/* Header mejorado */}
+        <div className="projects-header">
+          <div className="header-icon-wrapper">
+            <FaCode className="header-icon" />
+          </div>
+          <h2 className="section-title">Mis Proyectos</h2>
+          <p className="section-subtitle">
+            Una colección de proyectos que demuestran mis habilidades en desarrollo full-stack, 
+            desde aplicaciones de escritorio hasta plataformas web modernas con IA
+          </p>
+        </div>
+
+        <div className="projects-container">
+          {projects.map((project, index) => (
+            <div key={project.id} className={`project-card ${index % 2 === 1 ? 'reverse' : ''}`}>
+              <div className="project-image-section">
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="project-overlay">
+                    <div className="project-actions">
+                      <a href={project.github} className="project-btn" target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                      </a>
+                      {project.demo && (
+                        <a href={project.demo} className="project-btn" target="_blank" rel="noopener noreferrer">
+                          <FaExternalLinkAlt />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
+                <div className="project-badges">
+                  <span className="category-badge">{project.category}</span>
+                  <span className={`status-badge ${project.status === 'En línea' ? 'online' : 'completed'}`}>
+                    {project.status}
+                  </span>
+                </div>
               </div>
-              
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                
-                <div className="project-technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
-                  ))}
+
+              <div className="project-content-section">
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
+                  <div className="project-number">0{project.id}</div>
                 </div>
                 
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-technologies">
+                  <h4 className="tech-title">Tecnologías utilizadas:</h4>
+                  <div className="tech-grid">
+                    {project.technologies.map((tech, index) => (
+                      <span key={index} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="project-features">
                   <h4 className="features-title">
-                    <FaCode /> Características principales:
+                    <FaStar className="features-icon" />
+                    Características principales:
                   </h4>
                   <ul className="features-list">
-                    {project.features.map((feature, index) => (
+                    {project.features.slice(0, 3).map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="project-links">
                   <a href={project.github} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                     <FaGithub /> Código fuente
                   </a>
-                  <a href={project.demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <FaExternalLinkAlt /> Ver demo
-                  </a>
+                  {project.demo && (
+                    <a href={project.demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                      <FaEye /> Ver demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Footer de proyectos */}
+        <div className="projects-footer">
+          <div className="footer-content">
+            <h3 className="footer-title">¿Interesado en colaborar?</h3>
+            <p className="footer-subtitle">
+              Siempre estoy abierto a nuevos proyectos y oportunidades de aprendizaje
+            </p>
+            <a href="https://github.com/LisandroJimenez" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <FaGithub /> Ver más en GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { FaChevronDown, FaCode, FaLaptopCode, FaRocket, FaDownload, FaEye } from 'react-icons/fa'
-import avatar from '../assets/Avatar.jpg';
+import avatar from '/assets/Avatar.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const Welcome = ({ setActiveSection }) => {
