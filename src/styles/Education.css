@@ -1,25 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Variables CSS */
 :root {
-  --primary-color: #3b82f6;
-  --secondary-color: #6366f1;
-  --white: #ffffff;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --gray-300: #d1d5db;
-  --gray-100: #f3f4f6;
-  --border-radius: 12px;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --education-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --education-card-bg: var(--white);
+  --education-timeline-bg: var(--gradient-primary);
+  --education-shadow: var(--shadow);
+  --education-shadow-lg: var(--shadow-lg);
+  --education-text-primary: var(--text-primary);
+  --education-text-secondary: var(--text-secondary);
+  --education-border: var(--gray-300);
+}
+
+[data-theme="dark"] {
+  --education-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --education-card-bg: var(--white);
+  --education-timeline-bg: var(--gradient-primary);
+  --education-shadow: var(--shadow);
+  --education-shadow-lg: var(--shadow-lg);
+  --education-text-primary: var(--text-primary);
+  --education-text-secondary: var(--text-secondary);
+  --education-border: var(--gray-300);
 }
 
 /* Estilos base */
 .education {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: var(--education-bg);
   padding: 80px 0;
   min-height: 100vh;
 }
@@ -45,7 +49,7 @@
   background: var(--gradient-primary);
   border-radius: 20px;
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--education-shadow-lg);
 }
 
 .header-icon {
@@ -57,7 +61,7 @@
 .section-title {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--education-text-primary);
   margin-bottom: 1rem;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -67,7 +71,7 @@
 
 .section-subtitle {
   font-size: 1.25rem;
-  color: var(--text-secondary);
+  color: var(--education-text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -89,7 +93,7 @@
   gap: 1rem;
   font-size: 1.75rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--education-text-primary);
   margin-bottom: 3rem;
   justify-content: center;
 }
@@ -112,7 +116,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: var(--gradient-primary);
+  background: var(--education-timeline-bg);
   border-radius: 2px;
 }
 
@@ -129,8 +133,8 @@
   height: 60px;
   background: var(--gradient-primary);
   border-radius: 50%;
-  border: 4px solid var(--white);
-  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--education-card-bg);
+  box-shadow: var(--education-shadow-lg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,10 +148,10 @@
 }
 
 .timeline-content {
-  background: var(--white);
+  background: var(--education-card-bg);
   border-radius: var(--border-radius);
   padding: 2rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--education-shadow);
   margin-left: 2rem;
   transition: all 0.3s ease;
   position: relative;
@@ -155,8 +159,13 @@
 }
 
 .timeline-content:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--education-shadow-lg);
   transform: translateY(-4px);
+  border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .current-education {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(147, 197, 253, 0.1) 100%);
   border-color: var(--primary-color);
 }
 
@@ -175,7 +184,7 @@
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 600;
-  box-shadow: var(--shadow);
+  box-shadow: var(--education-shadow);
 }
 
 .timeline-header {
@@ -189,7 +198,7 @@
 .timeline-title {
   font-size: 1.375rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--education-text-primary);
   margin: 0;
   line-height: 1.3;
 }
@@ -202,7 +211,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   white-space: nowrap;
-  box-shadow: var(--shadow);
+  box-shadow: var(--education-shadow);
 }
 
 .timeline-meta {
@@ -217,7 +226,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-secondary);
+  color: var(--education-text-secondary);
   font-weight: 500;
 }
 
@@ -228,7 +237,7 @@
 }
 
 .timeline-description {
-  color: var(--text-secondary);
+  color: var(--education-text-secondary);
   line-height: 1.6;
   margin: 0 0 1.5rem 0;
   font-size: 1rem;
@@ -236,14 +245,14 @@
 
 /* Sección de tecnologías */
 .technologies-section {
-  border-top: 1px solid var(--gray-300);
+  border-top: 1px solid var(--education-border);
   padding-top: 1.5rem;
 }
 
 .technologies-title {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--education-text-primary);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -266,6 +275,12 @@
   transition: all 0.2s ease;
 }
 
+[data-theme="dark"] .technology-tag {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(147, 197, 253, 0.2));
+  color: var(--primary-color);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
 .technology-tag:hover {
   background: var(--gradient-primary);
   color: var(--white);
@@ -279,10 +294,10 @@
 }
 
 .footer-content {
-  background: var(--white);
+  background: var(--education-card-bg);
   border-radius: var(--border-radius);
   padding: 2.5rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--education-shadow-lg);
   max-width: 600px;
   margin: 0 auto;
   border: 2px solid transparent;
@@ -304,12 +319,12 @@
 .footer-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--education-text-primary);
   margin-bottom: 1rem;
 }
 
 .footer-subtitle {
-  color: var(--text-secondary);
+  color: var(--education-text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -317,7 +332,7 @@
 .progress-bar {
   width: 100%;
   height: 6px;
-  background-color: var(--gray-300);
+  background-color: var(--education-border);
   border-radius: 3px;
   overflow: hidden;
 }

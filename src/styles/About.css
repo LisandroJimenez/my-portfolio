@@ -1,6 +1,32 @@
 /* About Section Styles */
+:root {
+  --about-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --about-pattern-opacity: 0.02;
+  --about-card-bg: var(--white);
+  --about-shadow: var(--shadow);
+  --about-shadow-lg: var(--shadow-lg);
+  --about-text-primary: var(--text-primary);
+  --about-text-secondary: var(--text-secondary);
+  --about-border: var(--gray-300);
+  --about-gray-100: var(--gray-100);
+  --about-gray-200: var(--gray-200);
+}
+
+[data-theme="dark"] {
+  --about-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --about-pattern-opacity: 0.05;
+  --about-card-bg: var(--white);
+  --about-shadow: var(--shadow);
+  --about-shadow-lg: var(--shadow-lg);
+  --about-text-primary: var(--text-primary);
+  --about-text-secondary: var(--text-secondary);
+  --about-border: var(--gray-300);
+  --about-gray-100: var(--gray-100);
+  --about-gray-200: var(--gray-200);
+}
+
 .about {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: var(--about-bg);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -15,6 +41,10 @@
   bottom: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.02"/><circle cx="50" cy="10" r="1" fill="%23000" opacity="0.02"/><circle cx="10" cy="60" r="1" fill="%23000" opacity="0.02"/><circle cx="90" cy="40" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
   pointer-events: none;
+}
+
+[data-theme="dark"] .about::before {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23fff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23fff" opacity="0.05"/><circle cx="50" cy="10" r="1" fill="%23fff" opacity="0.05"/><circle cx="10" cy="60" r="1" fill="%23fff" opacity="0.05"/><circle cx="90" cy="40" r="1" fill="%23fff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
 }
 
 /* Header Section */
@@ -37,12 +67,16 @@
 
 .profile-image {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border: 4px solid var(--white);
+  box-shadow: 0 60px 40px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--about-card-bg);
+}
+
+[data-theme="dark"] .profile-image {
+  box-shadow: 0 60px 40px rgba(0, 0, 0, 0.3);
 }
 
 .profile-image img {
@@ -61,16 +95,16 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--white);
+  background: var(--about-card-bg);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--about-shadow);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
 }
 
 .status-dot {
@@ -109,7 +143,7 @@
 
 .stat-label {
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   margin-top: 0.25rem;
 }
 
@@ -128,26 +162,26 @@
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   border: none;
-  background: var(--white);
-  color: var(--text-secondary);
+  background: var(--about-card-bg);
+  color: var(--about-text-secondary);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
-  box-shadow: var(--shadow);
+  box-shadow: var(--about-shadow);
 }
 
 .nav-tab:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
   color: var(--primary-color);
 }
 
 .nav-tab.active {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--gradient-primary);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .tab-icon {
@@ -168,10 +202,10 @@
 }
 
 .info-card {
-  background: var(--white);
+  background: var(--about-card-bg);
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--about-shadow);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -180,7 +214,7 @@
 }
 
 .info-card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
   border-left-color: var(--primary-color);
 }
 
@@ -204,14 +238,14 @@
 .info-label {
   display: block;
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   margin-bottom: 0.25rem;
 }
 
 .info-value {
   display: block;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
   font-size: 1rem;
 }
 
@@ -226,7 +260,7 @@
   gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
   margin-bottom: 2rem;
 }
 
@@ -242,28 +276,28 @@
 }
 
 .personality-card {
-  background: var(--white);
+  background: var(--about-card-bg);
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--about-shadow);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .personality-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .personality-card h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
   margin-bottom: 0.75rem;
 }
 
 .personality-card p {
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   line-height: 1.6;
 }
 
@@ -281,10 +315,10 @@
 }
 
 .goal-card {
-  background: var(--white);
+  background: var(--about-card-bg);
   padding: 2rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--about-shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -310,7 +344,7 @@
 
 .goal-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .goal-header {
@@ -333,21 +367,21 @@
 }
 
 .goal-timeline {
-  background: var(--gray-100);
+  background: var(--about-gray-100);
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
 }
 
 .goal-timeline-long {
-  background: var(--gray-100);
+  background: var(--about-gray-100);
   padding: 0.5rem 1rem;
   border-radius: 12px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   text-align: center;
   margin-top: 1rem;
 }
@@ -365,9 +399,19 @@
   color: #059669;
 }
 
+[data-theme="dark"] .goal-impact.alto {
+  background: rgba(52, 211, 153, 0.2);
+  color: #34d399;
+}
+
 .goal-impact.muy-alto {
   background: rgba(245, 158, 11, 0.1);
   color: #D97706;
+}
+
+[data-theme="dark"] .goal-impact.muy-alto {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
 }
 
 .goal-impact.revolucionario {
@@ -375,15 +419,20 @@
   color: #7C3AED;
 }
 
+[data-theme="dark"] .goal-impact.revolucionario {
+  background: rgba(167, 139, 250, 0.2);
+  color: #a78bfa;
+}
+
 .goal-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
   margin-bottom: 0.75rem;
 }
 
 .goal-description {
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -395,14 +444,14 @@
 .progress-label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   margin-bottom: 0.5rem;
 }
 
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: var(--gray-200);
+  background: var(--about-gray-200);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -446,7 +495,7 @@
   top: 0;
   width: 40px;
   height: 40px;
-  background: var(--white);
+  background: var(--about-card-bg);
   border: 3px solid var(--primary-color);
   border-radius: 50%;
   display: flex;
@@ -454,31 +503,31 @@
   justify-content: center;
   color: var(--primary-color);
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--about-shadow);
 }
 
 .timeline-content {
-  background: var(--white);
+  background: var(--about-card-bg);
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--about-shadow);
   transition: all 0.3s ease;
 }
 
 .timeline-content:hover {
   transform: translateX(10px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .timeline-content h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
   margin-bottom: 0.75rem;
 }
 
 .timeline-content p {
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   line-height: 1.6;
 }
 
@@ -494,10 +543,10 @@
 }
 
 .philosophy-card {
-  background: var(--white);
+  background: var(--about-card-bg);
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--about-shadow);
   text-align: center;
   transition: all 0.3s ease;
   border-top: 4px solid var(--primary-color);
@@ -505,18 +554,18 @@
 
 .philosophy-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .philosophy-card h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--about-text-primary);
   margin-bottom: 0.75rem;
 }
 
 .philosophy-card p {
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   line-height: 1.6;
 }
 
@@ -591,8 +640,8 @@
   }
   
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
   
   .stat-number {

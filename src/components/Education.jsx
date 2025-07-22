@@ -1,7 +1,17 @@
-import { GraduationCap, MapPin, Calendar, Code2, Database, Globe, Award } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Code2, Database, Globe, Award, RocketIcon  } from 'lucide-react';
 
 const Education = () => {
   const education = [
+    {
+      degree: 'Prácticas Profesionales',
+      institution: 'Tribal Worldwide',
+      period: '2025',
+      location: 'Guatemala, Guatemala',
+      description: 'Prácticas profesionales como desarrollador Full Stack, participando en proyectos reales de diseño y desarrollo web, colaborando en equipo y aplicando tecnologías como React, Node.js y Tailwind CSS.',
+      technologies: ['React', 'Node.js', 'Tailwind CSS'],
+      status: 'in progress',
+      icon: RocketIcon
+    },
     {
       degree: 'Sexto Perito en Informática',
       institution: 'Fundación Kinal',
@@ -47,14 +57,14 @@ const Education = () => {
             Desarrollando habilidades técnicas sólidas en programación y tecnologías web modernas
           </p>
         </div>
-        
+
         <div className="education-container">
           <div className="education-section">
             <h3 className="section-heading">
               <Award className="section-icon" />
               Trayectoria Educativa
             </h3>
-            
+
             <div className="timeline">
               {education.map((edu, index) => {
                 const IconComponent = edu.icon;
@@ -67,12 +77,12 @@ const Education = () => {
                       {edu.status === 'current' && (
                         <div className="current-badge">En Curso</div>
                       )}
-                      
+
                       <div className="timeline-header">
                         <h4 className="timeline-title">{edu.degree}</h4>
                         <span className="timeline-period">{edu.period}</span>
                       </div>
-                      
+
                       <div className="timeline-meta">
                         <span className="timeline-institution">
                           <Calendar className="meta-icon" />
@@ -83,9 +93,9 @@ const Education = () => {
                           {edu.location}
                         </span>
                       </div>
-                      
+
                       <p className="timeline-description">{edu.description}</p>
-                      
+
                       {/* Sección de tecnologías */}
                       <div className="technologies-section">
                         <h5 className="technologies-title">Tecnologías Principales</h5>

@@ -51,6 +51,10 @@ const Welcome = ({ setActiveSection }) => {
                         <p className="welcome-subtitle">
                             Especializado en crear experiencias web excepcionales con tecnologías modernas como React, Node.js y más.
                         </p>
+                        <p className="welcome-subtitle">
+                            "Feeling deeply isn’t weakness.<br />
+                            It’s being human — and that’s brave."
+                        </p>
                         <div className="welcome-buttons">
                             <button
                                 className="btn btn-primary"
@@ -67,20 +71,18 @@ const Welcome = ({ setActiveSection }) => {
                         <div className="profile-card">
                             <div className="profile-avatar">
                                 <img src={avatar} alt="Profile" />
-                                <div className="status-indicator"></div>
                             </div>
 
                             <div className="profile-info">
                                 <h3>Lisandro Jiménez Vásquez</h3>
                                 <p>Desarrollador Full Stack</p>
-                                <div className="profile-location">
-                                    📍 Guatemala, Guatemala
-                                </div>
-                                <div className="profile-status">
-                                    <span className="status-dot"></span>
-                                    Disponible para proyectos
-                                </div>
+
+
                             </div>
+                        </div>
+                        <div className="profile-status">
+                            <span className="status-dot"></span>
+                            Disponible para proyectos
                         </div>
                     </div>
                 </div>
