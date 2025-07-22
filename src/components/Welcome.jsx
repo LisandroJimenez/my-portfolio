@@ -62,9 +62,14 @@ const Welcome = ({ setActiveSection }) => {
                             >
                                 <FaEye /> Ver mis proyectos
                             </button>
-                            <button className="btn btn-secondary">
+                            <a
+                                href="/Lisandro-Jiménez-Vásquez.pdf"
+                                download
+                                className="btn btn-secondary"
+                            >
                                 <FaDownload /> Descargar CV
-                            </button>
+                            </a>
+
                         </div>
                     </div>
                     <div className="welcome-image">
