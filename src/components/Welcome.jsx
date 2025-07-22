@@ -58,7 +58,7 @@ const Welcome = ({ setActiveSection }) => {
                         <div className="welcome-buttons">
                             <button
                                 className="btn btn-primary"
-                                onClick={() => handleNavigate('projects')}
+                                onClick={() => navigate('/projects')}
                             >
                                 <FaEye /> Ver mis proyectos
                             </button>
@@ -85,10 +85,7 @@ const Welcome = ({ setActiveSection }) => {
 
                             </div>
                         </div>
-                        <div className="profile-status">
-                            <span className="status-dot"></span>
-                            Disponible para proyectos
-                        </div>
+
                     </div>
                 </div>
 
