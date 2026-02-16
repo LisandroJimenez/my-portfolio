@@ -1,6 +1,6 @@
 import React from 'react'
-import Skills from '../components/Skills'
-import Navbar from '../components/Navbar'
+import Skills from '../components/Skills/Skills'
+import Navbar from '../components/Navbar/Navbar'
 
 const SkillsPage = () => {
     return (

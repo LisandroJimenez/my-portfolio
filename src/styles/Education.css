@@ -338,16 +338,16 @@
 }
 
 .progress-fill {
-  width: 85%;
+  width: 100%;
   height: 100%;
   background: var(--gradient-primary);
   border-radius: 3px;
-  animation: progressAnimation 2s ease-out;
+  animation: progressAnimation 3s ease-out;
 }
 
 @keyframes progressAnimation {
   from { width: 0%; }
-  to { width: 85%; }
+  to { width: 100%; }
 }
 
 /* Responsive */

@@ -1,48 +1,7 @@
-import { GraduationCap, MapPin, Calendar, Code2, Database, Globe, Award, RocketIcon  } from 'lucide-react';
-
+import { GraduationCap, MapPin, Calendar, Code2, Database, Globe, Award, RocketIcon, UniversityIcon  } from 'lucide-react';
+import {education} from './educationData.js';
 const Education = () => {
-  const education = [
-    {
-      degree: 'Prácticas Profesionales',
-      institution: 'Tribal Worldwide',
-      period: '2025',
-      location: 'Guatemala, Guatemala',
-      description: 'Prácticas profesionales como desarrollador Full Stack, participando en proyectos reales de diseño y desarrollo web, colaborando en equipo y aplicando tecnologías como React, Node.js y Tailwind CSS.',
-      technologies: ['React', 'Node.js', 'Tailwind CSS'],
-      status: 'in progress',
-      icon: RocketIcon
-    },
-    {
-      degree: 'Sexto Perito en Informática',
-      institution: 'Fundación Kinal',
-      period: '2025',
-      location: 'Guatemala, Guatemala',
-      description: 'Desarrollo de aplicaciones web con Node.js, Express, MongoDB, HTML, CSS, JavaScript y React, utilizando frameworks como Chakra UI y Tailwind CSS.',
-      technologies: ['Node.js', 'React', 'MongoDB', 'Tailwind CSS', 'Express'],
-      status: 'current',
-      icon: Globe
-    },
-    {
-      degree: 'Quinto Perito en Informática',
-      institution: 'Fundación Kinal',
-      period: '2024',
-      location: 'Guatemala, Guatemala',
-      description: 'Desarrollo de aplicaciones con Java (consola, JavaFX y Spring Boot), uso de MySQL, HTML, CSS (Bootstrap), JavaScript e introducción a React.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Bootstrap', 'JavaScript'],
-      status: 'completed',
-      icon: Code2
-    },
-    {
-      degree: 'Cuarto Perito en Informática',
-      institution: 'Fundación Kinal',
-      period: '2023',
-      location: 'Guatemala, Guatemala',
-      description: 'Redes Cisco (CCNA), introducción a la programación y fundamentos de Java.',
-      technologies: ['Cisco CCNA', 'Java', 'Networking', 'Fundamentos'],
-      status: 'completed',
-      icon: Database
-    }
-  ];
+  
 
   return (
     <section className="education">
@@ -118,7 +77,7 @@ const Education = () => {
         {/* Footer motivacional */}
         <div className="education-footer">
           <div className="footer-content">
-            <h3 className="footer-title">Próximamente Graduado</h3>
+            <h3 className="footer-title">Graduado en Perito en Informática</h3>
             <p className="footer-subtitle">
               Listo para aplicar mis conocimientos en proyectos reales y contribuir al mundo del desarrollo de software
             </p>

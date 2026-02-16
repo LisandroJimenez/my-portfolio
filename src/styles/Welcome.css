@@ -69,6 +69,8 @@
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 500px;
+
+  
 }
 
 .welcome-buttons {
@@ -353,7 +355,7 @@
 
 .quick-nav-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
@@ -513,6 +515,9 @@
   
   .welcome-subtitle {
     font-size: 1.1rem;
+    margin-left: auto;   /* Centra el bloque del párrafo horizontalmente */
+    margin-right: auto;  /* Centra el bloque del párrafo horizontalmente */
+    text-align: center;
   }
   
   .welcome-buttons {
