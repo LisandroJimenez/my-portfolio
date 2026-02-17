@@ -1,6 +1,24 @@
 export const projects = [
   {
     id: 1,
+    title: 'Blog Speakly',
+    description: 'Plataforma de blogging donde los usuarios pueden interactuar comentando y dando likes a publicaciones gestionadas desde el backend. Incluye mensajería y notificaciones en tiempo real para mantener a la comunidad activa.',
+    image: '/assets/Blog.png',
+    technologies: ['React', 'Node.js', 'MongoDB', 'ChakraUI'],
+    github: 'https://github.com/LisandroJimenez/ReviewManager-FrontEnd.git',
+    demo:'https://reviewmanager-9465d.web.app/',
+    category: 'Social Platform',
+    status: 'En línea',
+    features: [
+      'Visualización de publicaciones',
+      'Sistema de comentarios',
+      'Likes en publicaciones',
+      'Mensajería entre usuarios',
+      'Notificaciones push'
+    ]
+  },
+  {
+    id: 2,
     title: 'SuperKinal',
     description: 'Aplicación de escritorio desarrollada en JavaFX para la gestión de supermercados. Permite administrar productos, categorías, distribuidores y generar facturas en PDF con JasperSoft.',
     image: '/assets/SuperKinal.png',
@@ -17,7 +35,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'SGDB Restaurante',
     description: 'Aplicación web desarrollada con JSP y Servlets para la gestión de restaurantes. Permite administrar clientes, platos, proveedores y generar reportes de ventas. Desplegada en Apache Tomcat con base de datos MySQL.',
     image: '/assets/SGDBRestaurante.png',
@@ -34,7 +52,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'Almacenadora',
     description: 'Plataforma web avanzada para la gestión de bodegas y almacenamiento. Permite controlar inventarios, proveedores, ingresos y egresos de mercancías, con un dashboard interactivo y notificaciones en tiempo real.',
     image: '/assets/Almacenadora.png',
@@ -48,23 +66,6 @@ export const projects = [
       'Ingreso y salida de productos',
       'Autenticación de usuarios',
       'Notificaciones en tiempo real'
-    ]
-  },
-  {
-    id: 4,
-    title: 'Blog Speakly',
-    description: 'Plataforma de blogging donde los usuarios pueden interactuar comentando y dando likes a publicaciones gestionadas desde el backend. Incluye mensajería y notificaciones en tiempo real para mantener a la comunidad activa.',
-    image: '/assets/Blog.png',
-    technologies: ['React', 'Node.js', 'MongoDB', 'ChakraUI'],
-    github: 'https://github.com/LisandroJimenez/ReviewManager-FrontEnd.git',
-    category: 'Social Platform',
-    status: 'En línea',
-    features: [
-      'Visualización de publicaciones',
-      'Sistema de comentarios',
-      'Likes en publicaciones',
-      'Mensajería entre usuarios',
-      'Notificaciones push'
     ]
   },
   {
