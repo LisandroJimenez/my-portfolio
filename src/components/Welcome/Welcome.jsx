@@ -31,7 +31,7 @@ const Welcome = () => {
                             <button className="btn btn-primary" onClick={() => navigate('/projects')}>
                                 <FaEye /> Ver mis proyectos
                             </button>
-                            <a href="/Lisandro-Jiménez-Vásquez-CV-2026.pdf" download className="btn btn-secondary">
+                            <a href="/Lisandro_Jiménez_Vásquez_Curriculum_2026.pdf" download className="btn btn-secondary">
                                 <FaDownload /> Descargar CV
                             </a>
                         </div>

@@ -10,17 +10,25 @@ import {
   SiSpring,
   SiMysql,
   SiBootstrap,
-  SiVercel
+  SiVercel,
+  SiPostgresql,
+  SiServerless,
+  SiAmazonsqs,
+  SiDatabricks,
+  SiLazarus,
+  SiErpnext
 } from 'react-icons/si';
 import {
-  FaCoffee
+  FaCoffee,
+  FaDatabase,
+  FaJava
 } from 'react-icons/fa';
 
 export const skills = [
   { name: 'JavaScript', percentage: 80, color: '#F7DF1E', icon: SiJavascript, category: 'Frontend' },
   { name: 'React', percentage: 80, color: '#61DAFB', icon: SiReact, category: 'Frontend' },
   { name: 'Node.js', percentage: 80, color: '#339933', icon: SiNodedotjs, category: 'Backend' },
-  { name: 'Java', percentage: 80, color: '#ED8B00', icon: FaCoffee, category: 'Backend' },
+  { name: 'Java', percentage: 80, color: '#ED8B00', icon: FaJava, category: 'Backend' },
   { name: 'HTML5', percentage: 80, color: '#E34F26', icon: SiHtml5, category: 'Frontend' },
   { name: 'CSS3', percentage: 80, color: '#1572B6', icon: SiCss3, category: 'Frontend' },
   { name: 'MongoDB', percentage: 80, color: '#47A248', icon: SiMongodb, category: 'Database' },
@@ -80,6 +88,14 @@ export const databases = [
     icon: SiMysql,
     color: '#4479A1',
     description: 'Sistemas relacionales robustos y consultas complejas'
+  },
+  {
+    name: 'PostgreSQL',
+    level: 'Principiante',
+    experience: '1 mes',
+    icon: SiPostgresql,
+    color: '#4479A1',
+    description: 'Sistemas relacionales robustos y consultas complejas'
   }
 ];
 
@@ -99,5 +115,13 @@ export const tools = [
     icon: SiGit,
     color: '#F05032',
     description: 'Control de versiones y colaboración en equipo'
+  },
+  {
+    name: 'Amazon Quicksight',
+    level: 'Principiante',
+    experience: '1 mes',
+    icon: FaDatabase,
+    color: '#6c44a1ff',
+    description: 'Sistemas de BI y visualización de datos'
   }
 ];
